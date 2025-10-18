@@ -1,0 +1,46 @@
+.fluid-cursor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  filter: url(#goo);
+}
+
+.cursor-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  transform-origin: center center;
+  --scale-multiplier: 1;
+  transform: translate(var(--x, 0), var(--y, 0)) scale(calc(var(--scale, 1) * var(--scale-multiplier)));
+}
+
+.cursor-circle.expand {
+  animation: cursorClick 0.4s ease-in-out forwards;
+}
+
+.cursor-hidden {
+  cursor: none !important;
+}
+
+.cursor-hidden * {
+  cursor: none !important;
+}
+
+
+@keyframes cursorClick {
+  0% {
+    --scale-multiplier: 1;
+  }
+  50% {
+    --scale-multiplier: 1.2;
+  }
+  100% {
+    --scale-multiplier: 1;
+  }
+}
