@@ -31,32 +31,32 @@ const ResourceItem = ({ icon, text }: { icon: React.ReactNode; text: string }) =
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-16 sm:py-24">
+    <section id="how-it-works" className="py-16 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="text-center space-y-6 mb-12">
           <div className="w-48 h-[2px] bg-gray-600 mx-auto"></div>
           <div className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-1 text-sm font-medium text-text-secondary shadow-sm">
             <Lightbulb className="h-4 w-4 text-text-tertiary" />
-            <span>How it works</span>
+            <span>How It Works</span>
           </div>
 
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-text-primary leading-tight">
-            With us, <br className="sm:hidden" />
+            Put proof between <br className="sm:hidden" />
             <span className="relative inline-block">
               <span className="text-text-primary">
-                college admissions is easy
+                interviews and offers
               </span>
               <span className="absolute -bottom-2.5 left-0 right-0 h-1 bg-[var(--color-accent-blue)] rounded-full"></span>
             </span>
           </h2>
           
           <p className="text-base sm:text-lg text-text-secondary max-w-2xl mx-auto !mt-8">
-            From finding your dream school to drafting your essays, CollegeNavigator is made to help you craft the perfect application.
+            TrustCollab slots in right after interviews, giving you a live sandbox trial so every hiring decision is backed by proof, not promises.
           </p>
 
           <div className="pt-4">
             <span className="inline-flex items-center gap-2 font-semibold text-text-primary hover:text-accent-blue transition-colors duration-200">
-              How it works
+              ⚡ Validate Your Next Hire
               <ArrowRight className="h-4 w-4" />
             </span>
           </div>
@@ -68,17 +68,17 @@ const HowItWorksSection = () => {
               <div className="w-16 h-16 rounded-2xl bg-slate-800 text-white flex items-center justify-center text-3xl font-bold flex-shrink-0">
                 01
               </div>
-              <h3 className="text-2xl font-bold text-text-primary leading-tight pt-1 md:pt-0">Make your profile</h3>
+              <h3 className="text-2xl font-bold text-text-primary leading-tight pt-1 md:pt-0">Interview as usual</h3>
             </div>
             <p className="text-text-secondary">
-              Share and track your stats, supplements, awards, and extracurriculars
+              Shortlist who sounds great.
             </p>
              <div className="grid grid-cols-2 gap-3 mt-4">
-              <FeatureButton icon={<BarChart className="w-5 h-5" />} text="Stats" />
-              <FeatureButton icon={<GraduationCap className="w-5 h-5" />} text="Interests" />
-              <FeatureButton icon={<Trophy className="w-5 h-5" />} text="Athletics" />
-              <FeatureButton icon={<MoreHorizontal className="w-5 h-5" />} text="Preferences" />
-              <FeatureButton icon={<PenSquare className="w-5 h-5" />} text="Supplements" />
+              <FeatureButton icon={<BarChart className="w-5 h-5" />} text="Role expectations" />
+              <FeatureButton icon={<GraduationCap className="w-5 h-5" />} text="Team signals" />
+              <FeatureButton icon={<Trophy className="w-5 h-5" />} text="Must-have skills" />
+              <FeatureButton icon={<MoreHorizontal className="w-5 h-5" />} text="Risk flags" />
+              <FeatureButton icon={<PenSquare className="w-5 h-5" />} text="Interview notes" />
             </div>
           </div>
 
@@ -87,16 +87,18 @@ const HowItWorksSection = () => {
               <div className="w-16 h-16 rounded-2xl bg-slate-800 text-white flex items-center justify-center text-3xl font-bold flex-shrink-0">
                 02
               </div>
-              <h3 className="text-2xl font-bold text-text-primary leading-tight pt-1 md:pt-0">Find your fit</h3>
+              <h3 className="text-2xl font-bold text-text-primary leading-tight pt-1 md:pt-0">Launch a sandbox trial</h3>
             </div>
             <p className="text-text-secondary">
-              Get 24/7 college admissions support from our team, 24/7.
+              Real task, timed, observed by AI co-pilot.
             </p>
                         <div className="bg-[#03A2E9] text-white rounded-2xl rounded-br-none p-4 mt-4">
-              <p className="text-white">What university would I feel most at home at?</p>
+              <p className="text-white">Please begin Rachel's interview at 3pm local time.</p>
             </div>
             <div className="bg-[#E5E5EA] text-text-primary rounded-2xl rounded-bl-none p-4 mt-4">
-              <p className="text-text-primary">Based on your profile and preference for an open curriculum and contained campus life, Brown University would be an excellent choice. </p>
+              <p className="text-text-primary">Rachel's interview is starting now.
+                <br />
+                 I'll assess her collaboration skills, communication style, and final deliverable quality.</p>
             </div>
           </div>
 
@@ -105,16 +107,16 @@ const HowItWorksSection = () => {
               <div className="w-16 h-16 rounded-2xl bg-slate-800 text-white flex items-center justify-center text-3xl font-bold flex-shrink-0">
                 03
               </div>
-              <h3 className="text-2xl font-bold text-text-primary leading-tight pt-1 md:pt-0">Ace your apps</h3>
+              <h3 className="text-2xl font-bold text-text-primary leading-tight pt-1 md:pt-0">Get instant validation</h3>
             </div>
             <p className="text-text-secondary">
-              Get customized advice, resources, or actions from AI agents to help you min max your college profile.
+              Objective performance score and behavioral insights — no bias, no guessing.
             </p>
             <div className="space-y-3 mt-4">
-              <ResourceItem icon={<List className="w-5 h-5" />} text="Application Tracker" />
-              <ResourceItem icon={<FileText className="w-5 h-5" />} text="Deep Essay Reviews" />
-              <ResourceItem icon={<Link2 className="w-5 h-5" />} text="Resource Library" />
-              <ResourceItem icon={<MessageCircle className="w-5 h-5" />} text="Community Forums" />
+              <ResourceItem icon={<List className="w-5 h-5" />} text="Objective performance score" />
+              <ResourceItem icon={<FileText className="w-5 h-5" />} text="Behavioral breakdown" />
+              <ResourceItem icon={<Link2 className="w-5 h-5" />} text="Shareable highlight reels" />
+              <ResourceItem icon={<MessageCircle className="w-5 h-5" />} text="Actionable next steps" />
             </div>
           </div>
         </div>

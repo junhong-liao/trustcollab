@@ -1,8 +1,6 @@
 "use client";
 
-import Image from "next/image";
-import { Star, User } from "lucide-react";
-import { useState } from "react";
+import { Star } from "lucide-react";
 
 type Testimonial = {
   name: string;
@@ -13,104 +11,85 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Sarah Chen",
-    college: "Stanford '28",
-    quote: "CollegeNavigator's AI essay reviewer transformed my application. The feedback was incredibly detailed!",
+    name: "Jamal Ortiz",
+    college: "Head of Engineering · AtlasOps",
+    quote: "We shipped our first sandbox trial the day after onboarding. Watching candidates build alongside our team exposed gaps interviews never caught.",
     avatar: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-030654-avatar1.jpg",
   },
   {
-    name: "Michael Rodriguez",
-    college: "MIT '28",
-    quote: "The interview prep feature was a game-changer. I walked into my MIT interview confident and prepared.",
+    name: "Priya Nandakumar",
+    college: "Talent Lead · Sequoia-backed SaaS",
+    quote: "TrustCollab cut our hiring cycle from 24 days to 9. We now move forward with confidence knowing the AI scorecard has our back.",
     avatar: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-663686-avatar2.jpg",
   },
   {
-    name: "Emily Thompson",
-    college: "Harvard '28",
-    quote: "Found $50,000 in scholarships I never knew existed. Absolutely life-changing!",
+    name: "Lena Park",
+    college: "Co-Founder · Sprintly",
+    quote: "Founders kept asking for proof behind every hire. Now we hand them the sandbox replay and the conversation ends with 'approved'.",
     avatar: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-600958-avatar3.jpg",
   },
   {
-    name: "David Kim",
-    college: "Yale '28",
-    quote: "The personalized college matching saved me so much time. Applied to perfect fit schools only.",
+    name: "Marco Diaz",
+    college: "CTO · Brightloop",
+    quote: "The behavioral insights surfaced collaboration issues and leadership sparks we never would have seen in a whiteboard interview.",
     avatar: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-105204-avatar4.jpg",
   },
   {
-    name: "Jessica Martinez",
-    college: "Princeton '28",
-    quote: "Having an AI copilot throughout my journey made all the difference. Like a 24/7 counselor!",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Jessica%20Martinez",
+    name: "Hannah Rivers",
+    college: "Ops Lead · Finch Supply",
+    quote: "I finally have a fair, bias-free way to compare candidates. The AI notes highlight real behaviors instead of gut feel.",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Hannah%20Rivers",
   },
   {
-    name: "Alex Johnson",
-    college: "Columbia '28",
-    quote: "Never missed a deadline thanks to the timeline tracker. Submitted everything early!",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Alex%20Johnson",
+    name: "Noah Kim",
+    college: "CEO · Ember Labs",
+    quote: "Investors love the proof badges. They literally screenshot our TrustCollab reports into the board deck.",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Noah%20Kim",
   },
   {
-    name: "Sophia Lee",
-    college: "Brown '28",
-    quote: "The essay analyzer helped me find my authentic voice. Got into my dream school!",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Sophia%20Lee",
+    name: "Sasha Morgan",
+    college: "Recruiting Partner · Arc Collective",
+    quote: "The replay feature lets hiring managers catch up on trials in minutes. No more wrangling calendars for follow-up interviews.",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Sasha%20Morgan",
   },
   {
-    name: "Ryan Patel",
-    college: "UPenn '28",
-    quote: "CollegeNavigator made the impossible possible. First-gen student heading to Penn!",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Ryan%20Patel",
+    name: "Omar Khalil",
+    college: "Product Director · Mavenly",
+    quote: "Candidates tell us this is the most honest interview they've had. The best ones thrive and self-select in.",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Omar%20Khalil",
   },
   {
-    name: "Isabella Garcia",
-    college: "Duke '28",
-    quote: "The community support was amazing. Found my best friends before even starting college!",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Isabella%20Garcia",
+    name: "Isabel Reyes",
+    college: "Chief of Staff · Beacon One",
+    quote: "Our team stopped debating résumés. We now debate the clips and metrics, which means faster, calmer decisions.",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Isabel%20Reyes",
   },
   {
-    name: "Nathan Wu",
-    college: "Caltech '28",
-    quote: "Scholarship finder paid for my entire education. Can't thank CollegeNavigator enough!",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Nathan%20Wu",
+    name: "Tyler Brooks",
+    college: "VP Engineering · LatticeLight",
+    quote: "TrustCollab surfaced communication issues that would have cost us months post-hire. It paid for itself in the first week.",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Tyler%20Brooks",
   },
   {
-    name: "Olivia Brown",
-    college: "Northwestern '28",
-    quote: "The mock interviews prepared me for everything. Aced my Northwestern interview!",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Olivia%20Brown",
+    name: "Amelia Fox",
+    college: "Head of People · Signal Ridge",
+    quote: "The setup took less than an hour. Now every finalist runs through the same trial and scorecard, keeping us consistent.",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Amelia%20Fox",
   },
   {
-    name: "Ethan Davis",
-    college: "Cornell '28",
-    quote: "Best investment my parents ever made. Got into 8 out of 10 schools I applied to!",
-    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Ethan%20Davis",
+    name: "Ravi Patel",
+    college: "Principal · Velocity Ventures",
+    quote: "When our portfolio founders show us TrustCollab dashboards, we know their hiring engine is de-risked. It's become a diligence staple.",
+    avatar: "https://api.dicebear.com/7.x/initials/svg?seed=Ravi%20Patel",
   },
 ];
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
-  const [imgError, setImgError] = useState(false);
-  const showIcon = !testimonial.avatar || testimonial.avatar.includes("api.dicebear.com/7.x/initials") || imgError;
-
   return (
     <figure className="relative h-fit w-[350px] shrink-0 rounded-2xl bg-white p-6 shadow-lg">
-      <div className="flex items-center gap-4">
-        {showIcon ? (
-          <div className="h-12 w-12 rounded-full bg-muted flex items-center justify-center text-gray-400">
-            <User className="h-6 w-6" aria-hidden />
-          </div>
-        ) : (
-          <Image
-            src={testimonial.avatar}
-            alt={testimonial.name}
-            width={48}
-            height={48}
-            className="h-12 w-12 rounded-full object-cover bg-muted"
-            onError={() => setImgError(true)}
-          />
-        )}
-        <div>
-          <p className="text-base font-bold text-text-primary">{testimonial.name}</p>
-          <p className="text-sm text-text-secondary">{testimonial.college}</p>
-        </div>
+      <div className="flex flex-col">
+        <p className="text-base font-bold text-text-primary">{testimonial.name}</p>
+        <p className="text-sm text-text-secondary">{testimonial.college}</p>
       </div>
       <div className="mt-4 flex items-center">
         {Array(5)
@@ -167,10 +146,10 @@ export default function Testimonials() {
             Testimonials
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-text-primary sm:text-4xl md:text-5xl">
-            Why students love CollegeNavigator
+            Why hiring teams choose TrustCollab
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
-            Join thousands of students who got into their dream colleges with CollegeNavigator
+            Founders, recruiters, and investors use live sandbox proof to back every offer they send.
           </p>
         </div>
 
@@ -185,7 +164,7 @@ export default function Testimonials() {
         
         <div className="mt-16 text-center">
           <span className="text-base font-semibold text-text-primary transition-colors hover:text-accent-blue">
-            Read all 1,200+ reviews →
+            Peek inside more validation stories →
           </span>
         </div>
       </div>

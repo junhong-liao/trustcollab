@@ -3,21 +3,20 @@ import {
   Award,
   BookOpenText,
   ClipboardList,
-  DollarSign,
   FileCheck2,
   Search,
   Target,
-  ThumbsUp,
   Users,
 } from 'lucide-react';
 
 const allFeatures = [
-  { title: ["Scholarships"], icon: <DollarSign className="w-8 h-8" /> },
-  { title: ["Extracurriculars"], icon: <ThumbsUp className="w-8 h-8" /> },
-  { title: ["Application", "Tracker"], icon: <ClipboardList className="w-8 h-8" /> },
-  { title: ["Essay", "Review"], icon: <FileCheck2 className="w-8 h-8" /> },
-  { title: ["Campus", "Engagement"], icon: <Users className="w-8 h-8" /> },
-  { title: ["College", "Recommendations"], icon: <Search className="w-8 h-8" /> },
+  { title: ["Sandbox", "Trials"], icon: <Target className="w-8 h-8" /> },
+  { title: ["AI Score", "Cards"], icon: <ClipboardList className="w-8 h-8" /> },
+  { title: ["Collab", "Replays"], icon: <Users className="w-8 h-8" /> },
+  { title: ["Behavioral", "Signals"], icon: <Search className="w-8 h-8" /> },
+  { title: ["Proof", "Badges"], icon: <Award className="w-8 h-8" /> },
+  { title: ["Role", "Playbooks"], icon: <BookOpenText className="w-8 h-8" /> },
+  { title: ["Validated", "Hires"], icon: <FileCheck2 className="w-8 h-8" /> },
 ];
 
 const row1Features = allFeatures.filter(Boolean);

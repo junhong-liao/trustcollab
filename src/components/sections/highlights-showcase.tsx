@@ -6,40 +6,40 @@ import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
 const features = [
   {
-    title: "All in One Dashboard",
-    description: "See everything at a glance. Track your progress.",
+    title: "Live Sandbox Trials",
+    description: "Drop candidates into a real environment and see how they actually perform.",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-761165-feature1.png",
-    link: "https://collegenavigator.ai",
+    link: "https://trustcollab.xyz",
   },
   {
-    title: "SAT Practice",
-    description: "Take practice tests. Get instant feedback.",
+    title: "AI Performance Dashboard",
+    description: "Automatic scoring on speed, quality, collaboration, and problem solving.",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-950790-feature2.png",
-    link: "https://collegenavigator.ai",
+    link: "https://trustcollab.xyz",
   },
   {
-    title: "Essay Review",
-    description: "Write better essays. Get feedback instantly.",
+    title: "Collaboration Signals",
+    description: "Track communication, initiative, and decision making in real time.",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-256627-feature3.png",
-    link: "https://collegenavigator.ai",
+    link: "https://trustcollab.xyz",
   },
   {
-    title: "Extracurricular Builder",
-    description: "Plan your activities. Build your profile.",
+    title: "Role-Ready Task Library",
+    description: "Launch pre-built trials matched to engineering, product, and ops roles.",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-338396-feature4.png",
-    link: "https://collegenavigator.ai",
+    link: "https://trustcollab.xyz",
   },
   {
-    title: "Chance Me Analysis",
-    description: "Check your odds. Find your matches.",
+    title: "Truthful Scorecards",
+    description: "Give your team a shared, bias-free rubric that captures what matters.",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-008693-feature5.png",
-    link: "https://collegenavigator.ai",
+    link: "https://trustcollab.xyz",
   },
   {
-    title: "Application Tracker",
-    description: "Stay on top of deadlines. Never miss a step.",
+    title: "Hiring Snapshot",
+    description: "Summaries and next steps ready to share with founders, investors, or hiring panels.",
     image: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-761165-feature1.png",
-    link: "https://collegenavigator.ai",
+    link: "https://trustcollab.xyz",
   },
 ];
 
@@ -80,17 +80,17 @@ const HighlightsShowcase = () => {
   };
 
   return (
-    <section className="py-24 bg-background-secondary">
+    <section id="why-teams" className="py-24 bg-background-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-end mb-12">
           <div className="max-w-2xl">
             <h2 className="text-5xl font-extrabold tracking-tight text-text-primary">
-              Here's how we help:
+              Every bad hire costs you months. One sandbox trial costs you minutes.
             </h2>
             <p className="mt-4 text-lg text-text-secondary">
-              Our comprehensive platform takes the stress out of admissions season.
-              From AI-powered essay editing to personalized SAT prep, every feature is designed to maximize your
-              success.
+              The best teams don’t rely on talk — they test. In under 30 minutes, see how a candidate solves,
+              communicates, and collaborates inside a real-time trial powered by AI metrics. It’s not another interview
+              — it’s truth under pressure.
             </p>
           </div>
           {/* Arrows moved next to the carousel below */}
@@ -142,7 +142,7 @@ const HighlightsShowcase = () => {
                 </h3>
                 <p className="mt-2 text-white/80">{feature.description}</p>
                 <div className="mt-6 inline-flex items-center gap-2 text-white font-semibold">
-                  Read more
+                  🚀 Run Your First Sandbox Trial
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>

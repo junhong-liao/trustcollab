@@ -11,33 +11,33 @@ import {
 const FAQ_DATA = [
   {
     value: "item-1",
-    question: "What happens after I upgrade?",
+    question: "What happens after I request early access?",
     answer:
-      "You'll immediately get unlimited access to CollegeNavigator's premium features"
-  },
-  {
-    value: "item-5",
-    question: "What's included in CollegeNavigator Plus?",
-    answer:
-      "You'll be given access to unlimited essay and supplement reviews, unbounded applications, and free access to our scholarship matching tool.",
+      "We schedule a 15-minute onboarding, tailor sandbox templates to your roles, and spin up your first trial environment within 24 hours.",
   },
   {
     value: "item-2",
-    question: "Can I cancel my subscription anytime?",
+    question: "How long does a sandbox trial take to run?",
     answer:
-      "Yes, you can cancel your subscription at any time through your account settings. You'll keep access until the end of your current billing period.",
+      "Most teams complete trials in under 30 minutes per candidate. TrustCollab handles prep, timing, and AI observation so you only focus on the results.",
+  },
+  {
+    value: "item-3",
+    question: "Can my hiring panel join and score together?",
+    answer:
+      "Yes. Invite founders, hiring managers, and recruiters to review the live feed or replay. Everyone sees the same objective scorecard and behavioral breakdown.",
   },
   {
     value: "item-4",
-    question: "Do you have any options for low-income students?",
+    question: "Does TrustCollab work with our ATS or workflows?",
     answer:
-      "We strongly believe in supporting students from all backgrounds. Please contact our support team with a valid student ID, and we'll be in touch with next steps.",
+      "We sync decisions via webhooks or quick exports today, with native integrations for Lever and Ashby shipping soon. No heavy lift required.",
   },
   {
-    value: "item-6",
-    question: "Do you offer refunds?",
+    value: "item-5",
+    question: "What if a candidate declines the sandbox trial?",
     answer:
-      "If you're not happy with CollegeNavigator for any reason within the first 7 days of your subscription, our team will assist you with a full refund.",
+      "We provide a lightweight alternative challenge and coach you on positioning. Most candidates lean in because it proves their value faster than another interview.",
   },
 ];
 

@@ -1,2 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg width="800px" height="800px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--twemoji" preserveAspectRatio="xMidYMid meet"><path fill="#3B88C3" d="M36 32a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h28a4 4 0 0 1 4 4v28z"></path><path fill="#FFF" d="M19.723 6.552c2.264 0 6.666.744 6.666 3.473c0 1.116-.775 2.077-1.922 2.077c-1.272 0-2.139-1.085-4.744-1.085c-3.844 0-5.829 3.256-5.829 7.038c0 3.689 2.015 6.852 5.829 6.852c2.605 0 3.658-1.302 4.93-1.302c1.396 0 2.047 1.395 2.047 2.107c0 2.977-4.682 3.659-6.976 3.659c-6.294 0-10.666-4.992-10.666-11.41c-.001-6.448 4.34-11.409 10.665-11.409z"></path></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="tc-surface" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C1224"/>
+      <stop offset="1" stop-color="#161E36"/>
+    </linearGradient>
+    <linearGradient id="tc-strut" x1="20" y1="16" x2="38" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6EFCE3"/>
+      <stop offset="1" stop-color="#1AA8FF"/>
+    </linearGradient>
+    <radialGradient id="tc-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="rotate(135 16.485 26.637) scale(14.8493)">
+      <stop stop-color="#6EFCE3" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#6EFCE3" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="url(#tc-surface)"/>
+  <circle cx="46" cy="18" r="11" fill="url(#tc-glow)" opacity=".75"/>
+  <rect x="16" y="18" width="32" height="6" rx="3" fill="url(#tc-strut)"/>
+  <rect x="28" y="24" width="6" height="22" rx="3" fill="url(#tc-strut)"/>
+  <path d="M34 24c-6.627 0-12 5.373-12 12s5.373 12 12 12c3.341 0 5.97-1.042 8.196-3.219a2 2 0 0 1 2.828.055l2.052 2.17C43.947 50.162 39.627 52 34 52 23.507 52 15 43.493 15 33s8.507-19 19-19c5.627 0 9.947 1.838 13.076 5.994l-2.052 2.169a2 2 0 0 1-2.828.055C39.97 25.042 37.341 24 34 24Z" fill="#F8FAFC" fill-opacity=".9"/>
+  <circle cx="46" cy="18" r="3.2" fill="#6EFCE3"/>
+</svg>

@@ -13,7 +13,7 @@ const GridPattern = () => (
 
 const FinalCtaSection = () => {
   return (
-    <section className="py-16 md:py-24">
+    <section id="final-call" className="py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1240px] relative">
         <div className="relative w-full max-w-[1240px] mx-auto rounded-3xl bg-white shadow-lg p-6 md:p-8 overflow-hidden">
           <div className="pointer-events-none absolute inset-0 h-full w-full opacity-30">
@@ -22,12 +22,13 @@ const FinalCtaSection = () => {
 
           <div className="flex flex-col items-center justify-center text-center py-16 md:py-24 relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-text-primary">
-              College admissions, made easy.
+              The Validation Layer for Hiring.
             </h2>
-            <span
-              className="group text-lg font-semibold text-accent-blue hover:text-accent-blue transition-colors duration-200 inline-flex items-center gap-2"
-            >
-              Try it yourself
+            <p className="mb-6 max-w-xl text-center text-base text-text-secondary md:text-lg">
+            Interviews don't capture the full picture. Start assessing real performance, in real time.
+            </p>
+            <span className="group text-lg font-semibold text-accent-blue hover:text-accent-blue transition-colors duration-200 inline-flex items-center gap-2">
+              Secure Your Slot
               <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
             </span>
           </div>

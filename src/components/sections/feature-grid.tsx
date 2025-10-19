@@ -16,46 +16,46 @@ import {
 // Moved highlight cards data here to display below "...and so much more"
 const features = [
   {
-    title: "App Tracker",
-    description: "See everything at a glance. Track your progress.",
+    title: "AI-Verified Sandbox Data",
+    description: "Replace intuition with performance metrics mapped to your hiring rubric.",
     image:
       "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-256627-feature3.png",
-    link: "https://collegenavigator.ai",
+    link: "https://trustcollab.xyz",
   },
   {
-    title: "University Matcher",
-    description: "Find your best match.",
+    title: "Minutes, Not Months",
+    description: "Shrink three-week evaluation loops into one 30-minute live trial.",
     image:
       "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-256627-feature3.png",
-    link: "https://collegenavigator.ai",
+    link: "https://trustcollab.xyz",
   },
   {
-    title: "Essay Review",
-    description: "Write better essays. Get feedback instantly.",
+    title: "Investor-Grade Reporting",
+    description: "Hand founders and backers the proof they keep asking for.",
     image:
       "https://slelguoygbfzlpylpxfs.supabase.co/storage/vv1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-256627-feature3.png",
-    link: "https://collegenavigator.ai",
+    link: "https://trustcollab.xyz",
   },
   {
-    title: "Scholarship Matcher",
-    description: "Access over $20M in scholarships nationwide.",
+    title: "Bias Guardrails",
+    description: "AI co-pilot captures behavior, not backgrounds, so every decision stays fair.",
     image:
       "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-256627-feature3.png",
-    link: "https://collegenavigator.ai",
+    link: "https://trustcollab.xyz",
   },
   {
-    title: "Chance Me",
-    description: "See your chances of getting in with cutting edge AI tools",
+    title: "Role-Ready Templates",
+    description: "Spin up product, engineering, and ops trials without reinventing the brief.",
     image:
       "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-256627-feature3.png",
-    link: "https://collegenavigator.ai",
+    link: "https://trustcollab.xyz",
   },
   {
-    title: "Community Forum",
-    description: "Stay in the loop and never miss a thing.",
+    title: "Founders Are Onboarding Now",
+    description: "Top teams are locking in lifetime proof badges before the beta fills up.",
     image:
       "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/e236c7bc-b1b7-47c4-ae55-3e607c7fb584-dreamyuni-ai/assets/images/next-256627-feature3.png",
-    link: "https://collegenavigator.ai",
+    link: "https://trustcollab.xyz",
   },
 ];
 
@@ -102,11 +102,22 @@ const CarouselDots = () => {
 
 export default function FeatureGrid() {
   return (
-    <section className="py-16 sm:py-24 bg-transparent">
+    <section id="why-now" className="py-16 sm:py-24 bg-transparent">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center text-text-primary mb-12">
-          ...and so much more
+        <h2 className="text-4xl md:text-5xl font-extrabold text-center text-text-primary mb-6">
+          The smartest startups already validate — you’re one step behind.
         </h2>
+        <div className="mx-auto mb-10 max-w-3xl text-center text-base text-text-secondary sm:text-lg">
+          <p>AI-verified sandbox data replaces intuition.</p>
+          <p>Cut 3-week evaluations to one afternoon.</p>
+          <p>Top founders and investors are onboarding this quarter.</p>
+        </div>
+        <div className="mb-12 text-center">
+          <span className="inline-flex items-center gap-2 text-base font-semibold text-accent-blue hover:text-accent-blue transition-colors duration-200">
+            🔥 Join the Beta Before It Closes
+            <ArrowRight className="w-4 h-4" />
+          </span>
+        </div>
         <div className="relative">
           <Carousel opts={{ align: "start", loop: true, slidesToScroll: 1 }} className="w-full px-6 md:px-12">
             <CarouselContent className="-ml-6">

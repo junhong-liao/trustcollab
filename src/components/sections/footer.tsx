@@ -3,37 +3,37 @@ import { Linkedin, Youtube, Instagram } from 'lucide-react';
 
 const Footer = () => {
   const productLinks = [
-    { href: 'https://collegenavigator.ai', text: 'Chance Me' },
-    { href: 'https://collegenavigator.ai', text: 'Holistic Profile Review' },
-    { href: 'https://collegenavigator.ai', text: 'Dream College Match' },
-    { href: 'https://collegenavigator.ai', text: 'Scholarship Match' },
-    { href: 'https://collegenavigator.ai', text: 'Student Forum' },
+    { href: 'https://trustcollab.xyz', text: 'Sandbox Trials' },
+    { href: 'https://trustcollab.xyz', text: 'AI Scorecards' },
+    { href: 'https://trustcollab.xyz', text: 'Collaboration Replays' },
+    { href: 'https://trustcollab.xyz', text: 'Role Templates' },
+    { href: 'https://trustcollab.xyz', text: 'Security & Compliance' },
   ];
 
   const companyLinks = [
-    { href: 'https://collegenavigator.ai', text: 'About Us' },
-    { href: 'https://collegenavigator.ai', text: 'Contact' },
-    { href: 'https://collegenavigator.ai', text: 'Terms of Service' },
+    { href: 'https://trustcollab.xyz', text: 'About TrustCollab' },
+    { href: 'https://trustcollab.xyz', text: 'Careers' },
+    { href: 'https://trustcollab.xyz', text: 'Press' },
   ];
 
   const connectLinks = [
-    { href: 'https://collegenavigator.ai', text: 'LinkedIn' },
-    { href: 'https://collegenavigator.ai', text: 'Discord' },
-    { href: 'https://collegenavigator.ai', text: 'YouTube' },
-    { href: 'https://collegenavigator.ai', text: 'Instagram' },
-    { href: 'https://collegenavigator.ai', text: 'Twitter' },
+    { href: 'https://trustcollab.xyz', text: 'LinkedIn' },
+    { href: 'https://trustcollab.xyz', text: 'Founder Updates' },
+    { href: 'https://trustcollab.xyz', text: 'Podcast' },
+    { href: 'https://trustcollab.xyz', text: 'Live Demos' },
+    { href: 'https://trustcollab.xyz', text: 'Community' },
   ];
 
   const legalLinks = [
-    { href: 'https://collegenavigator.ai', text: 'Privacy Policy' },
-    { href: 'https://collegenavigator.ai', text: 'Terms & Conditions' },
-    { href: 'https://collegenavigator.ai', text: 'Support' },
+    { href: 'https://trustcollab.xyz', text: 'Privacy Policy' },
+    { href: 'https://trustcollab.xyz', text: 'Terms & Conditions' },
+    { href: 'https://trustcollab.xyz', text: 'Support' },
   ];
 
   const socialIcons = [
-    { href: 'https://collegenavigator.ai', icon: Linkedin },
-    { href: 'https://collegenavigator.ai', icon: Youtube },
-    { href: 'https://collegenavigator.ai', icon: Instagram },
+    { href: 'https://trustcollab.xyz', icon: Linkedin },
+    { href: 'https://trustcollab.xyz', icon: Youtube },
+    { href: 'https://trustcollab.xyz', icon: Instagram },
   ];
 
   return (
@@ -45,9 +45,9 @@ const Footer = () => {
           <div className="relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-16">
               <div className="lg:col-span-4">
-                <h3 className="text-2xl font-bold text-foreground">CollegeNavigator.ai</h3>
+                <h3 className="text-2xl font-bold text-foreground">TrustCollab.xyz</h3>
                 <p className="mt-4 text-sm text-muted-foreground max-w-xs">
-                  Leveling the playing field for college admissions.
+                  Bringing truth under pressure to every hiring decision with live sandbox validation.
                 </p>
               </div>
 
@@ -95,7 +95,7 @@ const Footer = () => {
 
             <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
               <div className="flex flex-col text-center sm:text-left sm:flex-row flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-                <p>&copy;2025 CollegeNavigator. All rights reserved.</p>
+                <p>&copy;2025 TrustCollab. All rights reserved.</p>
                 <div className="flex gap-x-6">
                   {legalLinks.map((link) => (
                     <a key={link.text} href={link.href} className="hover:text-foreground transition-colors" target="_blank" rel="noreferrer">

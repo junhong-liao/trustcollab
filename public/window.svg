@@ -1,1 +1,26 @@
-<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 2.5h13v10a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1zM0 1h16v11.5a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 12.5zm3.75 4.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5M7 4.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m1.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5" fill="#666"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <defs>
+    <linearGradient id="panel-bg" x1="3" y1="4" x2="21" y2="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10172A"/>
+      <stop offset="1" stop-color="#17243F"/>
+    </linearGradient>
+    <linearGradient id="panel-top" x1="4" y1="5" x2="20" y2="5" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1AA8FF"/>
+      <stop offset="1" stop-color="#6EFCE3"/>
+    </linearGradient>
+    <linearGradient id="panel-spark" x1="8" y1="11" x2="16" y2="17" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6EFCE3"/>
+      <stop offset="1" stop-color="#1AA8FF"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="3" width="20" height="16.5" rx="3.5" fill="url(#panel-bg)"/>
+  <rect x="3.5" y="4.5" width="17" height="3" rx="1.5" fill="url(#panel-top)"/>
+  <circle cx="6" cy="6" r=".8" fill="#0B1020" opacity=".55"/>
+  <circle cx="8.8" cy="6" r=".8" fill="#0B1020" opacity=".35"/>
+  <circle cx="11.6" cy="6" r=".8" fill="#0B1020" opacity=".2"/>
+  <rect x="5.2" y="9.5" width="5.6" height="5.6" rx="1.2" fill="#0D1832" stroke="#233055" stroke-width="1"/>
+  <rect x="13.2" y="9.5" width="5.6" height="8.3" rx="1.3" fill="#0D1832" stroke="url(#panel-spark)" stroke-width="1.1"/>
+  <path d="M6.8 11.5h2.4M6.8 13.3H9" stroke="#3C4A6E" stroke-width="1.1" stroke-linecap="round"/>
+  <path d="M14.5 13.2 16 15.3l2-3" stroke="url(#panel-spark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M3.5 18.2h17" stroke="#0B1020" stroke-width="1" opacity=".3"/>
+</svg>

@@ -5,28 +5,28 @@ import { Check } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 
 const freeFeatures = [
-  "Free essay review credits every week",
-  "Personalized college recommendations",
-  "3 applications",
-  "Weekly scholarship opportunities",
-  "Community boards",
+  "2 sandbox trials every month",
+  "AI scorecard with collaboration metrics",
+  "Recorded replays and highlight reels",
+  "Standard role templates",
+  "Shared hiring notes workspace",
 ];
 
 const unlimitedFeatures = [
-  "Everything in free, plus:",
-  "Unlimited college applications",
-  "Unlimited scholarship matching",
-  "Unlimited essay drafts and review credits",
+  "Everything in Starter, plus:",
+  "Unlimited sandbox trials and templates",
+  "Custom role-specific scenarios",
+  "Advanced analytics and benchmarking",
 ];
 
 const enterpriseFeatures = [
-  "Cohort and school-wide analytics dashboard",
-  "Bulk onboarding and roster management",
-  "SSO/SIS integrations (Google, Clever, ClassLink)",
+  "Portfolio-wide analytics dashboard",
+  "Bulk onboarding and role provisioning",
+  "SSO integrations (Google, Okta, Azure AD)",
   "Custom workflows and permissions",
-  "Dedicated customer success manager",
-  "Data privacy addendum and compliance support",
-  "Priority support and SLAs",
+  "Dedicated performance strategist",
+  "Security reviews and compliance support",
+  "Priority support with rapid SLAs",
 ];
 
 const PricingSection = () => {
@@ -41,10 +41,10 @@ const PricingSection = () => {
             <span className="text-sm font-semibold text-blue-700">Pricing</span>
           </div>
           <h1 className="text-4xl font-bold tracking-tighter text-gray-900 md:text-5xl">
-            The best investment you'll ever make.
+            Proof-first hiring for every team size.
           </h1>
           <p className="mt-4 text-lg text-gray-600 md:text-xl">
-            Get the acceptance letter you deserve, step by step.
+            Start validating candidates in days, scale to every role when you’re ready.
           </p>
 
           <div className="mt-8 mb-10 flex items-center justify-center gap-4">
@@ -55,13 +55,13 @@ const PricingSection = () => {
               id="billing-cycle"
               checked={isAnnual}
               onCheckedChange={setIsAnnual}
-              aria-label="Toggle billing cycle"
+              aria-label="Toggle billing cadence"
             />
             <label htmlFor="billing-cycle" className="text-sm font-medium text-gray-600">
               Annual
             </label>
             <span className="ml-2 rounded-md bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-800">
-              Save 36%
+              Beta pricing
             </span>
           </div>
         </div>
@@ -72,10 +72,10 @@ const PricingSection = () => {
             <h3 className="text-2xl font-bold text-gray-900">Starter</h3>
             <p className="mt-4 text-5xl font-extrabold text-gray-900">Free</p>
             <p className="mt-4 text-base text-gray-600">
-              For families lightly researching the college planning process.
+              For teams exploring live sandbox validation with a small slate of roles.
             </p>
             <button className="mt-8 w-full rounded-lg bg-gray-100 py-3 font-semibold text-gray-800">
-              Get access for free
+              Claim beta pass
             </button>
             <hr className="my-8 border-gray-200" />
             <h4 className="text-lg font-semibold text-gray-900">Key features:</h4>
@@ -96,16 +96,16 @@ const PricingSection = () => {
                 <span className="text-sm font-semibold text-white">Most Popular</span>
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900">Unlimited</h3>
+            <h3 className="text-2xl font-bold text-gray-900">Growth</h3>
             <p className="mt-4 text-5xl font-extrabold text-gray-900">
               {isAnnual ? '$16' : '$25'}
               <span className="text-lg font-medium text-gray-500">/month</span>
             </p>
             <p className="mt-4 text-base text-gray-600">
-              For families who want to turbocharge their student's college applications 
+              For teams hiring across multiple roles who want every decision backed by proof.
             </p>
             <button className="mt-8 w-full rounded-lg bg-blue-500 py-3 font-semibold text-white">
-              Get CollegeNavigator Plus→
+              Unlock TrustCollab Growth →
             </button>
             <hr className="my-8 border-gray-200" />
             <h4 className="text-lg font-semibold text-gray-900">Everything you need:</h4>
@@ -124,10 +124,10 @@ const PricingSection = () => {
             <h3 className="text-2xl font-bold text-gray-900">Enterprise</h3>
             <p className="mt-4 text-5xl font-extrabold text-gray-900">Custom</p>
             <p className="mt-4 text-base text-gray-600">
-              For schools and districts bringing CollegeNavigator to their students.
+              For portfolios, talent collectives, and hyper-growth orgs deploying TrustCollab at scale.
             </p>
             <button className="mt-8 w-full rounded-lg bg-gray-900 py-3 font-semibold text-white">
-              Contact sales
+              Talk with us
             </button>
             <hr className="my-8 border-gray-200" />
             <h4 className="text-lg font-semibold text-gray-900">Built for institutions:</h4>
