@@ -86,10 +86,10 @@ const testimonials: Testimonial[] = [
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
-    <figure className="relative h-fit w-[350px] shrink-0 rounded-2xl bg-white p-6 shadow-lg">
+    <figure className="relative h-fit w-[260px] shrink-0 rounded-2xl bg-white p-5 shadow-lg sm:w-[310px] sm:p-6 lg:w-[350px]">
       <div className="flex flex-col">
-        <p className="text-base font-bold text-text-primary">{testimonial.name}</p>
-        <p className="text-sm text-text-secondary">{testimonial.college}</p>
+        <p className="text-sm font-bold text-text-primary sm:text-base">{testimonial.name}</p>
+        <p className="text-xs text-text-secondary sm:text-sm">{testimonial.college}</p>
       </div>
       <div className="mt-4 flex items-center">
         {Array(5)
@@ -99,7 +99,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
           ))}
       </div>
       <blockquote className="mt-4">
-        <p className="text-base text-text-secondary">"{testimonial.quote}"</p>
+        <p className="text-sm text-text-secondary sm:text-base">"{testimonial.quote}"</p>
       </blockquote>
     </figure>
   );
@@ -124,7 +124,7 @@ const TestimonialsScroller = ({
       : `animate-[marquee-right_${animationDuration}_linear_infinite]`;
 
   return (
-    <div className={`flex min-w-full shrink-0 gap-4 py-3 w-max flex-nowrap ${animationClass}`}>
+    <div className={`flex min-w-full shrink-0 gap-3 py-2 w-max flex-nowrap sm:gap-4 sm:py-3 ${animationClass}`}>
       {[...items, ...items].map((item, index) => (
         <TestimonialCard key={`${item.name}-${index}`} testimonial={item} />
       ))}
@@ -138,7 +138,7 @@ export default function Testimonials() {
   const row3 = [...testimonials.slice(3, 9)];
 
   return (
-    <section className="bg-background-primary py-20 lg:py-24">
+    <section id="testimonials" className="bg-background-primary py-16 sm:py-20 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl text-center">
           <div className="w-48 h-[2px] bg-gray-600 mx-auto mb-6"></div>
@@ -149,23 +149,26 @@ export default function Testimonials() {
             Why hiring teams choose TrustCollab
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-text-secondary">
-            Founders, recruiters, and investors use live sandbox proof to back every offer they send.
+            Join hundreds of founders, recruiters, and investors using our sandbox to validate candidates before hiring.
           </p>
         </div>
 
-        <div className="relative mt-12 flex flex-col gap-2 overflow-hidden">
-          <div className="pointer-events-none absolute top-0 inset-x-0 h-12 sm:h-16 bg-gradient-to-b from-background-primary to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-background-primary to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-background-primary to-transparent z-10" />
+        <div className="relative mt-10 flex flex-col gap-2 overflow-hidden sm:mt-12">
+          <div className="pointer-events-none absolute top-0 inset-x-0 h-10 sm:h-14 bg-gradient-to-b from-background-primary to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-12 sm:w-20 bg-gradient-to-r from-background-primary to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-12 sm:w-20 bg-gradient-to-l from-background-primary to-transparent z-10" />
           <TestimonialsScroller items={row1} direction="left" speed="normal" />
           <TestimonialsScroller items={row2} direction="right" speed="slow" />
           <TestimonialsScroller items={row3} direction="left" speed="fast" />
         </div>
         
-        <div className="mt-16 text-center">
-          <span className="text-base font-semibold text-text-primary transition-colors hover:text-accent-blue">
-            Peek inside more validation stories →
-          </span>
+        <div className="mt-12 text-center sm:mt-16">
+          <a
+            href={"https://forms.gle/4swXfsf4X4hQvrhj6"}
+            className="text-base font-semibold text-text-primary transition-colors hover:text-accent-blue"
+          >
+            Try it yourself →
+          </a>
         </div>
       </div>
     </section>

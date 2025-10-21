@@ -39,7 +39,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative flex min-h-[100vh] items-center overflow-hidden pb-8 pt-24 sm:min-h-[85vh] sm:pt-20"
+      className="relative flex min-h-[90vh] items-center overflow-visible pb-10 pt-20 sm:min-h-[85vh] sm:overflow-hidden sm:pb-8 sm:pt-24"
     >
       <div className="container relative z-10 mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
         <div className="relative z-20 mx-auto flex w-full max-w-5xl flex-col items-center text-center">
@@ -49,28 +49,27 @@ const Hero = () => {
                 <span className="text-gray-800">TrustCollab Beta Launch 🎉</span>
               </p>
             </div>
-            <h1 className="mb-6 text-4xl font-bold leading-[1.05] text-black sm:mb-8 sm:text-4xl sm:leading-[1.0] md:text-5xl lg:text-5xl xl:text-6xl">
+            <h1 className="mb-5 text-balance text-[clamp(1.15rem,5.8vw,1.65rem)] font-bold leading-tight tracking-tight text-black sm:mb-8 sm:text-4xl sm:leading-[1.05] md:text-5xl lg:text-5xl xl:text-6xl">
               <div className="block">Interviews Can Lie.</div>
               <div className="block">
                 <span className="relative inline-block whitespace-nowrap">
                   <span className="relative z-10">Real Performance Doesn't.</span>
-                  <div className="absolute -bottom-0.5 left-0 right-0 h-2 rounded-full bg-blue-500 opacity-80 sm:-bottom-1 sm:h-3" />
                 </span>
               </div>
             </h1>
-            <p className="mx-auto mb-8 max-w-3xl px-4 font-medium leading-relaxed text-gray-600 sm:mb-12 sm:px-0 sm:text-lg md:text-xl lg:text-2xl">
+            <p className="mx-auto mb-8 max-w-3xl px-2 text-base font-medium leading-relaxed text-gray-600 sm:mb-12 sm:px-0 sm:text-lg md:text-xl lg:text-2xl">
               Stop guessing who can actually do the job. 
               <br/>
               Try our live sandbox where candidates prove themselves in real world tasks, before you commit.
             </p>
-            <div className="mb-16 flex flex-col items-center gap-4">
+            <div className="mb-12 flex flex-col items-center gap-3 sm:mb-16 sm:gap-4">
               <div>
-                <button className="touch-manipulation flex min-h-[48px] w-full max-w-xs items-center justify-center gap-3 rounded-xl bg-gray-800 px-6 py-4 text-base font-semibold text-white shadow-lg transition-all duration-200 hover:bg-gray-900 hover:shadow-xl disabled:opacity-50 sm:w-auto sm:max-w-none sm:px-8 sm:py-3.5">
-                  <div>
-                    <GoogleIcon />
-                  </div>
-                  <span>Try It Free Now!</span>
-                </button>
+                <a
+                  href={"https://forms.gle/4swXfsf4X4hQvrhj6"}
+                  className="touch-manipulation flex min-h-[48px] w-full max-w-xs items-center justify-center gap-3 rounded-xl bg-gray-800 px-5 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:bg-gray-900 hover:shadow-xl disabled:opacity-50 sm:w-auto sm:max-w-none sm:px-8 sm:py-3.5 sm:text-base"
+                >
+                  <span>Try It Free Now</span>
+                </a>
               </div>
               <div className="flex w-full flex-col items-center gap-2">
                 <div className="scale-90 sm:scale-100">
@@ -94,17 +93,9 @@ const Hero = () => {
               </div>
             </div>
             <div className="px-4 text-center sm:px-0">
-              <p className="mb-4 text-xs font-medium text-gray-500 sm:mb-6 sm:text-sm">
+              <p className="mb-3 text-xs font-medium text-gray-500 sm:mb-6 sm:text-sm">
                 Teams validating candidates right now:
               </p>
-              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 opacity-60 sm:gap-x-8 md:gap-x-12 sm:gap-y-4">
-                <span className="text-sm font-bold text-gray-700 sm:text-base md:text-lg">Product Teams</span>
-                <span className="text-sm font-bold text-gray-700 sm:text-base md:text-lg">Engineering Leaders</span>
-                <span className="text-sm font-bold text-gray-700 sm:text-base md:text-lg">Ops Chiefs</span>
-                <span className="text-sm font-bold text-gray-700 sm:text-base md:text-lg">Recruiting Squads</span>
-                <span className="hidden text-sm font-bold text-gray-700 sm:inline sm:text-base md:text-lg">VC Portfolios</span>
-                <span className="hidden text-sm font-bold text-gray-700 sm:inline sm:text-base md:text-lg">High-Growth Startups</span>
-              </div>
             </div>
           </div>
         </div>

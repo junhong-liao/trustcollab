@@ -7,7 +7,7 @@ import CustomCursor from "@/components/CustomCursor";
 import SmoothScroll from "@/components/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "TrustCollab",
+  title: "TrustCollab | A better way to hire",
   description: "Run live sandbox trials between interviews and offers so you hire with proof, not promises.",
   icons: {
     icon: "/TCOLLAB.svg",

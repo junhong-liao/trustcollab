@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { getAppEntryUrl } from "@/lib/utils";
 import { Check } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 
@@ -74,9 +75,12 @@ const PricingSection = () => {
             <p className="mt-4 text-base text-gray-600">
               For teams exploring live sandbox validation with a small slate of roles.
             </p>
-            <button className="mt-8 w-full rounded-lg bg-gray-100 py-3 font-semibold text-gray-800">
+            <a
+              href={getAppEntryUrl()}
+              className="mt-8 w-full rounded-lg bg-gray-100 py-3 font-semibold text-gray-800 text-center"
+            >
               Claim beta pass
-            </button>
+            </a>
             <hr className="my-8 border-gray-200" />
             <h4 className="text-lg font-semibold text-gray-900">Key features:</h4>
             <ul className="mt-6 space-y-4">
@@ -104,9 +108,12 @@ const PricingSection = () => {
             <p className="mt-4 text-base text-gray-600">
               For teams hiring across multiple roles who want every decision backed by proof.
             </p>
-            <button className="mt-8 w-full rounded-lg bg-blue-500 py-3 font-semibold text-white">
+            <a
+              href={getAppEntryUrl()}
+              className="mt-8 w-full rounded-lg bg-blue-500 py-3 font-semibold text-white text-center"
+            >
               Unlock TrustCollab Growth →
-            </button>
+            </a>
             <hr className="my-8 border-gray-200" />
             <h4 className="text-lg font-semibold text-gray-900">Everything you need:</h4>
             <ul className="mt-6 space-y-4">
@@ -126,9 +133,12 @@ const PricingSection = () => {
             <p className="mt-4 text-base text-gray-600">
               For portfolios, talent collectives, and hyper-growth orgs deploying TrustCollab at scale.
             </p>
-            <button className="mt-8 w-full rounded-lg bg-gray-900 py-3 font-semibold text-white">
+            <a
+              href={getAppEntryUrl()}
+              className="mt-8 w-full rounded-lg bg-gray-900 py-3 font-semibold text-white text-center"
+            >
               Talk with us
-            </button>
+            </a>
             <hr className="my-8 border-gray-200" />
             <h4 className="text-lg font-semibold text-gray-900">Built for institutions:</h4>
             <ul className="mt-6 space-y-4">

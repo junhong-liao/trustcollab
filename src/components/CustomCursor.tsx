@@ -7,152 +7,61 @@ import "./custom-cursor.css";
 type CustomCursorProps = {
   size?: number;
   color?: string;
-  opacity?: number;
-  border?: string;
-  transitionTime?: number;
   hideDefaultCursor?: boolean;
 };
 
 const CustomCursor = ({
-  size = 26,
-  color = "rgba(59, 130, 246, 0.8)",
-  opacity = 0.8,
-  border = "2px solid rgba(59, 130, 246, 0.6)",
-  transitionTime = 0.15,
+  size = 20,
+  color = "#3b82f6", // Tailwind blue-500 to match Pricing component
   hideDefaultCursor = true,
 }: CustomCursorProps) => {
-  const cursorContainerRef = useRef<HTMLDivElement | null>(null);
-  const animationTimeoutRef = useRef<number | undefined>(undefined);
-  const mousePos = useRef({ x: 0, y: 0 });
-  const cursorCircles = useRef<HTMLDivElement[]>([]);
-  const cursorHistory = useRef<Array<{ x: number; y: number }>>([]);
-  const TAIL_LENGTH = 20;
+  const dotRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const container = cursorContainerRef.current;
-    if (!container) return;
-
-    // Initialize cursor history
-    cursorHistory.current = Array(TAIL_LENGTH).fill({ x: 0, y: 0 });
-
-    // Create cursor circles
-    for (let i = 0; i < TAIL_LENGTH; i++) {
-      const div = document.createElement("div");
-      div.classList.add("cursor-circle");
-      container.appendChild(div);
-      cursorCircles.current.push(div);
-    }
+    const dot = dotRef.current;
+    if (!dot) return;
 
     const handleMouseMove = (event: MouseEvent) => {
-      mousePos.current = { x: event.clientX, y: event.clientY };
-    };
-
-    const handlePointerDown = () => {
-      window.clearTimeout(animationTimeoutRef.current);
-      cursorCircles.current.forEach(circle => circle.classList.add("expand"));
-      animationTimeoutRef.current = window.setTimeout(() => {
-        cursorCircles.current.forEach(circle => circle.classList.remove("expand"));
-      }, 400);
-    };
-
-    const updateCursor = () => {
-      cursorHistory.current.shift();
-      cursorHistory.current.push({ x: mousePos.current.x, y: mousePos.current.y });
-
-      for (let i = 0; i < TAIL_LENGTH; i++) {
-        const current = cursorHistory.current[i];
-        const next = cursorHistory.current[i + 1] || cursorHistory.current[TAIL_LENGTH - 1];
-
-        const xDiff = next.x - current.x;
-        const yDiff = next.y - current.y;
-
-        current.x += xDiff * 0.99;
-        current.y += yDiff * 0.99;
-
-        const circle = cursorCircles.current[i];
-        const scale = i / TAIL_LENGTH;
-        
-        // Set position and scale using CSS variables
-        circle.style.setProperty('--x', `${current.x}px`);
-        circle.style.setProperty('--y', `${current.y}px`);
-        circle.style.setProperty('--scale', scale.toString());
-        
-        circle.style.width = `${size}px`;
-        circle.style.height = `${size}px`;
-        circle.style.background = color;
-        circle.style.opacity = opacity.toString();
-        circle.style.border = border;
-      }
-
-      requestAnimationFrame(updateCursor);
+      const x = event.clientX;
+      const y = event.clientY;
+      dot.style.transform = `translate(${x}px, ${y}px)`;
     };
 
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("pointerdown", handlePointerDown);
-    updateCursor();
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("pointerdown", handlePointerDown);
-      window.clearTimeout(animationTimeoutRef.current);
-      // Clean up circles
-      cursorCircles.current.forEach(circle => circle.remove());
-      cursorCircles.current = [];
-    };
-  }, [size, color, opacity, border, transitionTime]);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
   useEffect(() => {
     if (!hideDefaultCursor) return;
+    const body = document.body;
+    const html = document.documentElement;
+    const previousBodyCursor = body.style.cursor;
+    const previousHtmlCursor = html.style.cursor;
 
-    document.body.classList.add("cursor-hidden");
+    body.classList.add("cursor-hidden");
+    html.classList.add("cursor-hidden");
+    body.style.cursor = "none";
+    html.style.cursor = "none";
+
     return () => {
-      document.body.classList.remove("cursor-hidden");
+      body.classList.remove("cursor-hidden");
+      html.classList.remove("cursor-hidden");
+      body.style.cursor = previousBodyCursor;
+      html.style.cursor = previousHtmlCursor;
     };
   }, [hideDefaultCursor]);
 
   return (
-    <>
-      {/* SVG Goo Filter */}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="goo-filter"
-        version="1.1"
-        style={{
-          position: 'fixed',
-          width: 0,
-          height: 0,
-          pointerEvents: 'none',
-        }}
-      >
-        <defs>
-          <filter id="goo">
-            <feGaussianBlur
-              in="SourceGraphic"
-              stdDeviation="6"
-              result="blur"
-            />
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
-              result="goo"
-            />
-            <feComposite
-              in="SourceGraphic"
-              in2="goo"
-              operator="atop"
-            />
-          </filter>
-        </defs>
-      </svg>
-      
-      {/* Cursor Container */}
-      <div
-        ref={cursorContainerRef}
-        className={cn("fluid-cursor-container")}
-        aria-hidden="true"
-      />
-    </>
+    <div
+      ref={dotRef}
+      className={cn("custom-cursor-dot")}
+      style={{
+        width: `${size}px`,
+        height: `${size}px`,
+        backgroundColor: color,
+      }}
+      aria-hidden="true"
+    />
   );
 };
 

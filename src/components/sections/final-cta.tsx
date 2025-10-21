@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { getAppEntryUrl } from '@/lib/utils';
 
 const GridPattern = () => (
   <svg height="100%" width="100%">
@@ -27,10 +28,13 @@ const FinalCtaSection = () => {
             <p className="mb-6 max-w-xl text-center text-base text-text-secondary md:text-lg">
             Interviews don't capture the full picture. Start assessing real performance, in real time.
             </p>
-            <span className="group text-lg font-semibold text-accent-blue hover:text-accent-blue transition-colors duration-200 inline-flex items-center gap-2">
+            <a
+              href={"https://forms.gle/4swXfsf4X4hQvrhj6"}
+              className="group text-lg font-semibold text-accent-blue hover:text-accent-blue transition-colors duration-200 inline-flex items-center gap-2"
+            >
               Secure Your Slot
               <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
-            </span>
+            </a>
           </div>
         </div>
       </div>

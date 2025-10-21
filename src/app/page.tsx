@@ -16,8 +16,8 @@ export default function Home() {
       <main className="min-h-screen bg-white">
         <Hero />
         <AnimatedFeaturesMarquee />
-        <HowItWorksSection />
         <FeatureGrid />
+        <HowItWorksSection />
         <Testimonials />
         <PricingSection />
         <Faq />

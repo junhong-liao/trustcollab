@@ -55,10 +55,13 @@ const HowItWorksSection = () => {
           </p>
 
           <div className="pt-4">
-            <span className="inline-flex items-center gap-2 font-semibold text-text-primary hover:text-accent-blue transition-colors duration-200">
+            <a
+              href={"https://forms.gle/4swXfsf4X4hQvrhj6"}
+              className="inline-flex items-center gap-2 font-semibold text-text-primary hover:text-accent-blue transition-colors duration-200"
+            >
               ⚡ Validate Your Next Hire
               <ArrowRight className="h-4 w-4" />
-            </span>
+            </a>
           </div>
         </div>
 
@@ -96,8 +99,7 @@ const HowItWorksSection = () => {
               <p className="text-white">Please begin Rachel's interview at 3pm local time.</p>
             </div>
             <div className="bg-[#E5E5EA] text-text-primary rounded-2xl rounded-bl-none p-4 mt-4">
-              <p className="text-text-primary">Rachel's interview is starting now.
-                <br />
+              <p className="text-text-primary">Starting Rachel's 3-day trial interview now.
                  I'll assess her collaboration skills, communication style, and final deliverable quality.</p>
             </div>
           </div>

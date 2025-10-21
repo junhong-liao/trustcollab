@@ -1,72 +1,37 @@
 import React from 'react';
-import {
-  Award,
-  BookOpenText,
-  ClipboardList,
-  FileCheck2,
-  Search,
-  Target,
-  Users,
-} from 'lucide-react';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
 
-const allFeatures = [
-  { title: ["Sandbox", "Trials"], icon: <Target className="w-8 h-8" /> },
-  { title: ["AI Score", "Cards"], icon: <ClipboardList className="w-8 h-8" /> },
-  { title: ["Collab", "Replays"], icon: <Users className="w-8 h-8" /> },
-  { title: ["Behavioral", "Signals"], icon: <Search className="w-8 h-8" /> },
-  { title: ["Proof", "Badges"], icon: <Award className="w-8 h-8" /> },
-  { title: ["Role", "Playbooks"], icon: <BookOpenText className="w-8 h-8" /> },
-  { title: ["Validated", "Hires"], icon: <FileCheck2 className="w-8 h-8" /> },
-];
-
-const row1Features = allFeatures.filter(Boolean);
-
-// Single row marquee; second row removed
-
-interface FeatureCardProps {
-  title: string | string[];
-  icon: React.ReactNode;
-}
-
-const FeatureCard = ({ title, icon }: FeatureCardProps) => {
-  const titleLines = Array.isArray(title) ? title : [title];
-
-  return (
-    <div
-      className={`flex items-center gap-4 rounded-2xl p-6 flex-shrink-0 w-auto mx-1 sm:mx-2 bg-gray-900`}
-      style={{
-        boxShadow: '0 8px 30px rgba(0,0,0,0.12)'
-      }}
-    >
-      <div
-        className={`flex h-16 w-16 items-center justify-center rounded-xl flex-shrink-0 bg-gray-700`}
-      >
-        <div className={'text-white'}>{icon}</div>
-      </div>
-      <div className="flex-1">
-        {titleLines.map((line, i) => (
-          <h3
-            key={i}
-            className={`text-2xl font-bold leading-tight ${
-              'text-white'
-            }`}
-          >
-            {line}
-          </h3>
-        ))}
-      </div>
-    </div>
-  );
+// You can resize individual logos by editing `containerClassName` (height classes)
+// and/or `imgClassName` (constraints on the <Image /> itself). Defaults are kept
+// for items where overrides are not provided.
+type LogoItem = {
+  src: string;
+  alt: string;
+  /** Tailwind classes applied to the wrapper that controls visual height */
+  containerClassName?: string;
+  /** Tailwind classes applied to the <Image /> element */
+  imgClassName?: string;
 };
 
-const Marquee = ({ children, reverse = false }: { children: React.ReactNode; reverse?: boolean }) => {
-  const animationClass = reverse ? 'animate-marquee-reverse' : 'animate-marquee';
+const logos: LogoItem[] = [
+  { src: '/clients/miterro.jpeg', alt: 'Miterro' },
+  { src: '/clients/tanbii.jpeg', alt: 'Tanbii' },
+  { src: '/clients/wolfmeow.jpeg', alt: 'WolfMeow' },
+  // Example overrides: tighten or enlarge a single logo without affecting others
+  // containerClassName changes the displayed height; imgClassName can adjust min/max width
+  { src: '/clients/accredit.png', alt: 'Accredit', containerClassName: 'h-14 sm:h-16 md:h-20 lg:h-24' },
+  { src: '/clients/caroline-logo-2.png', alt: 'Caroline', containerClassName: 'h-14 sm:h-16 md:h-20 lg:h-24' },
+  { src: '/clients/collegenavigator.png', alt: 'College Navigator', containerClassName: 'h-12 sm:h-16 md:h-20 lg:h-24', imgClassName: 'min-w-[120px]' },
+];
+
+const Marquee = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex flex-nowrap">
-      <div className={`flex flex-shrink-0 items-stretch gap-1 sm:gap-2 ${animationClass}`}>
+    <div className="flex flex-nowrap w-full">
+      <div className="flex items-center gap-8 animate-logo-marquee w-max shrink-0 sm:gap-24">
         {children}
       </div>
-      <div className={`flex flex-shrink-0 items-stretch gap-1 sm:gap-2 ${animationClass}`} aria-hidden="true">
+      <div className="flex items-center gap-8 animate-logo-marquee w-max shrink-0 sm:gap-24" aria-hidden="true">
         {children}
       </div>
     </div>
@@ -74,39 +39,50 @@ const Marquee = ({ children, reverse = false }: { children: React.ReactNode; rev
 };
 
 const AnimatedFeaturesMarquee = () => {
-    return (
-        <section className="relative py-8">
-          <style>
-              {`
-              @keyframes marquee {
-                  from { transform: translateX(0); }
-                  to { transform: translateX(-100%); }
-              }
-              @keyframes marquee-reverse {
-                  from { transform: translateX(-100%); }
-                  to { transform: translateX(0); }
-              }
-              .animate-marquee {
-                  animation: marquee 40s linear infinite;
-              }
-              .animate-marquee-reverse {
-                  animation: marquee-reverse 40s linear infinite;
-              }
-              `}
-          </style>
-          <div className="flex flex-col gap-4 overflow-hidden">
-            <Marquee>
-              {row1Features.filter(Boolean).map((feature, index) => (
-                <FeatureCard
-                  key={`row1-${index}`}
-                  title={feature.title}
-                  icon={feature.icon}
+  return (
+    <section className="relative py-8 min-h-[96px]">
+      <style>{`
+        @keyframes logo-marquee {
+          from { transform: translateX(0); }
+          to { transform: translateX(-100%); }
+        }
+        .animate-logo-marquee {
+          animation: logo-marquee 30s linear infinite;
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-6px); }
+        }
+        .animate-float {
+          animation: float 4s ease-in-out infinite;
+        }
+      `}</style>
+      <div className="overflow-hidden w-full">
+        <Marquee>
+          {logos.map((logo, idx) => (
+            <div key={logo.alt} className="px-3 shrink-0 sm:px-8">
+              <div
+                className={cn(
+                  // Default heights if no per-logo override provided
+                  'h-16 sm:h-20 md:h-24 lg:h-28 animate-float',
+                  logo.containerClassName
+                )}
+                style={{ animationDelay: `${idx * 0.4}s` }}
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={240}
+                  height={96}
+                  className={cn('h-full w-auto object-contain min-w-[100px] sm:min-w-[140px]', logo.imgClassName)}
                 />
-              ))}
-            </Marquee>
-          </div>
-        </section>
-    );
+              </div>
+            </div>
+          ))}
+        </Marquee>
+      </div>
+    </section>
+  );
 };
 
 export default AnimatedFeaturesMarquee;
