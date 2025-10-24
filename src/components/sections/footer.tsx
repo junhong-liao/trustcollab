@@ -1,39 +1,41 @@
 import React from 'react';
 import { Linkedin, Youtube, Instagram } from 'lucide-react';
+import { getAppEntryUrl } from '@/lib/utils';
 
 const Footer = () => {
+  const appUrl = getAppEntryUrl();
   const productLinks = [
-    { href: 'https://trustcollab.xyz', text: 'Sandbox Trials' },
-    { href: 'https://trustcollab.xyz', text: 'AI Scorecards' },
-    { href: 'https://trustcollab.xyz', text: 'Collaboration Replays' },
-    { href: 'https://trustcollab.xyz', text: 'Role Templates' },
-    { href: 'https://trustcollab.xyz', text: 'Security & Compliance' },
+    { href: appUrl, text: 'Sandbox Trials' },
+    { href: appUrl, text: 'AI Scorecards' },
+    { href: appUrl, text: 'Collaboration Replays' },
+    { href: appUrl, text: 'Role Templates' },
+    { href: appUrl, text: 'Security & Compliance' },
   ];
 
   const companyLinks = [
-    { href: 'https://trustcollab.xyz', text: 'About TrustCollab' },
-    { href: 'https://trustcollab.xyz', text: 'Careers' },
-    { href: 'https://trustcollab.xyz', text: 'Press' },
+    { href: appUrl, text: 'About TrustCollab' },
+    { href: appUrl, text: 'Careers' },
+    { href: appUrl, text: 'Press' },
   ];
 
   const connectLinks = [
-    { href: 'https://trustcollab.xyz', text: 'LinkedIn' },
-    { href: 'https://trustcollab.xyz', text: 'Founder Updates' },
-    { href: 'https://trustcollab.xyz', text: 'Podcast' },
-    { href: 'https://trustcollab.xyz', text: 'Live Demos' },
-    { href: 'https://trustcollab.xyz', text: 'Community' },
+    { href: appUrl, text: 'LinkedIn' },
+    { href: appUrl, text: 'Founder Updates' },
+    { href: appUrl, text: 'Podcast' },
+    { href: appUrl, text: 'Live Demos' },
+    { href: appUrl, text: 'Community' },
   ];
 
   const legalLinks = [
-    { href: 'https://trustcollab.xyz', text: 'Privacy Policy' },
-    { href: 'https://trustcollab.xyz', text: 'Terms & Conditions' },
-    { href: 'https://trustcollab.xyz', text: 'Support' },
+    { href: appUrl, text: 'Privacy Policy' },
+    { href: appUrl, text: 'Terms & Conditions' },
+    { href: appUrl, text: 'Support' },
   ];
 
   const socialIcons = [
-    { href: 'https://trustcollab.xyz', icon: Linkedin },
-    { href: 'https://trustcollab.xyz', icon: Youtube },
-    { href: 'https://trustcollab.xyz', icon: Instagram },
+    { href: appUrl, icon: Linkedin },
+    { href: appUrl, icon: Youtube },
+    { href: appUrl, icon: Instagram },
   ];
 
   return (

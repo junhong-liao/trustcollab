@@ -19,26 +19,14 @@ const FAQ_DATA = [
     value: "item-2",
     question: "How long does a sandbox trial take to run?",
     answer:
-      "Most teams complete trials in under 30 minutes per candidate. TrustCollab handles prep, timing, and AI observation so you only focus on the results.",
+      "Trials can take anywhere from 30 minutes to 1 week per candidate. We handle the prep, timing, and performance analysis, so you only focus on the results.",
   },
   {
     value: "item-3",
-    question: "Can my hiring panel join and score together?",
+    question: "Can collaborators, or my hiring panel, join live, assess, and score together?",
     answer:
       "Yes. Invite founders, hiring managers, and recruiters to review the live feed or replay. Everyone sees the same objective scorecard and behavioral breakdown.",
-  },
-  {
-    value: "item-4",
-    question: "Does TrustCollab work with our ATS or workflows?",
-    answer:
-      "We sync decisions via webhooks or quick exports today, with native integrations for Lever and Ashby shipping soon. No heavy lift required.",
-  },
-  {
-    value: "item-5",
-    question: "What if a candidate declines the sandbox trial?",
-    answer:
-      "We provide a lightweight alternative challenge and coach you on positioning. Most candidates lean in because it proves their value faster than another interview.",
-  },
+  }
 ];
 
 export default function Faq() {

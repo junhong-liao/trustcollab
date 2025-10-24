@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 
 import { ArrowRight } from "lucide-react";
+import { getAppEntryUrl } from "@/lib/utils";
 
 // Moved highlight cards data here to display below "...and so much more"
 const features = [
@@ -40,10 +41,13 @@ export default function FeatureGrid() {
           <p>Our AI sandbox data replaces intuition. Cut 3-week evaluations to one afternoon.</p>
         </div>
         <div className="mb-12 text-center">
-          <span className="inline-flex items-center gap-2 text-base font-semibold text-accent-blue hover:text-accent-blue transition-colors duration-200">
+          <a
+            href={getAppEntryUrl()}
+            className="inline-flex items-center gap-2 text-base font-semibold text-accent-blue hover:text-accent-blue transition-colors duration-200"
+          >
             Try It Free Now
             <ArrowRight className="w-4 h-4" />
-          </span>
+          </a>
         </div>
         <div className="relative">
           <div className="mx-auto max-w-6xl">

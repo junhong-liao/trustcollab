@@ -1,6 +1,7 @@
 "use client";
 
 import { Star } from "lucide-react";
+import { getAppEntryUrl } from "@/lib/utils";
 
 type Testimonial = {
   name: string;
@@ -164,7 +165,7 @@ export default function Testimonials() {
         
         <div className="mt-12 text-center sm:mt-16">
           <a
-            href={"https://forms.gle/4swXfsf4X4hQvrhj6"}
+            href={getAppEntryUrl()}
             className="text-base font-semibold text-text-primary transition-colors hover:text-accent-blue"
           >
             Try it yourself →

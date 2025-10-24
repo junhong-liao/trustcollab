@@ -67,7 +67,7 @@ export default function Navigation() {
         </nav>
         <div className="hidden lg:flex items-center gap-2">
           <a
-            href={"https://forms.gle/4swXfsf4X4hQvrhj6"}
+            href={getAppEntryUrl()}
             className="px-4 py-2 rounded-md button text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center bg-black text-white shadow-[0_0_24px_rgba(34,42,53,0.06),_0_1px_1px_rgba(0,0,0,0.05),_0_0_0_1px_rgba(34,42,53,0.04),_0_0_4px_rgba(34,42,53,0.08),_0_16px_68px_rgba(47,48,55,0.05),_0_1px_0_rgba(255,255,255,0.1)_inset]"
           >
             Sign Up

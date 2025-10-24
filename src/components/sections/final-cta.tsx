@@ -29,7 +29,7 @@ const FinalCtaSection = () => {
             Interviews don't capture the full picture. Start assessing real performance, in real time.
             </p>
             <a
-              href={"https://forms.gle/4swXfsf4X4hQvrhj6"}
+              href={getAppEntryUrl()}
               className="group text-lg font-semibold text-accent-blue hover:text-accent-blue transition-colors duration-200 inline-flex items-center gap-2"
             >
               Secure Your Slot

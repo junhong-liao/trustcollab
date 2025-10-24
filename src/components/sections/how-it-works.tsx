@@ -12,6 +12,7 @@ import {
   MoreHorizontal,
   Trophy,
 } from "lucide-react";
+import { getAppEntryUrl } from "@/lib/utils";
 
 const FeatureButton = ({ icon, text }: { icon: React.ReactNode; text: string }) => (
   <div className="flex flex-col items-center justify-center gap-2 p-3 text-center bg-white shadow-md rounded-2xl border border-border/80 h-full">
@@ -56,7 +57,7 @@ const HowItWorksSection = () => {
 
           <div className="pt-4">
             <a
-              href={"https://forms.gle/4swXfsf4X4hQvrhj6"}
+              href={getAppEntryUrl()}
               className="inline-flex items-center gap-2 font-semibold text-text-primary hover:text-accent-blue transition-colors duration-200"
             >
               ⚡ Validate Your Next Hire

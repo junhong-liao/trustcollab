@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 
 const freeFeatures = [
-  "2 sandbox trials every month",
+  "1 sandbox trial every month",
   "AI scorecard with collaboration metrics",
   "Recorded replays and highlight reels",
   "Standard role templates",
@@ -102,7 +102,7 @@ const PricingSection = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-900">Growth</h3>
             <p className="mt-4 text-5xl font-extrabold text-gray-900">
-              {isAnnual ? '$16' : '$25'}
+              {isAnnual ? '$50' : '$40'}
               <span className="text-lg font-medium text-gray-500">/month</span>
             </p>
             <p className="mt-4 text-base text-gray-600">

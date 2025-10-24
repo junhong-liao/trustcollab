@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { FC } from 'react';
+import { getAppEntryUrl } from '@/lib/utils';
 
 const GoogleIcon: FC = () => (
   <span role="img" aria-label="fire" className="text-lg leading-none">
@@ -65,7 +66,7 @@ const Hero = () => {
             <div className="mb-12 flex flex-col items-center gap-3 sm:mb-16 sm:gap-4">
               <div>
                 <a
-                  href={"https://forms.gle/4swXfsf4X4hQvrhj6"}
+                  href={getAppEntryUrl()}
                   className="touch-manipulation flex min-h-[48px] w-full max-w-xs items-center justify-center gap-3 rounded-xl bg-gray-800 px-5 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:bg-gray-900 hover:shadow-xl disabled:opacity-50 sm:w-auto sm:max-w-none sm:px-8 sm:py-3.5 sm:text-base"
                 >
                   <span>Try It Free Now</span>
